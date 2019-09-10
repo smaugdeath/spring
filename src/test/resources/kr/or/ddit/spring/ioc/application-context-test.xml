@@ -40,4 +40,40 @@
 	<!-- spring bean scope prototype 테스트를 위한 빈 선언 -->
 	<!-- prototype 스코프는 해당 스프링 빈을 요청할때 마다 새로운 객체른 생성하여 전송 -->
 	<bean id="boardDaoP" class="kr.or.ddit.test.board.dao.BoardDao" scope="prototype"/>
+	
+	<!-- Collection 객체 동적 생성 -->
+	<!-- CollectionBean class 의 객체를 생성하여 스프링 번으로 등록하고
+		 CollectionBean class 의 list, map, set, properties 필드의 값을 셋터 주입을 한다 -->
+	<bean name="collectionBean" class="kr.or.ddit.test.ioc.CollectionBean">
+		<property name="list">
+			<list>
+				<value>brown</value>
+				<value>cony</value>
+				<value>sally</value>
+			</list>
+		</property>
+		
+		<property name="set">
+			<set>
+				<value>moon</value>
+				<value>james</value>
+			</set>
+		</property>
+		
+		<property name="map">
+			<map>
+				<entry key="userId" value="brown"/>
+				<entry key="alias" value="곰"/>
+			</map>
+		</property>
+		
+		<property name="properties">
+			<props>
+				<prop key="userId">brown</prop>
+				<prop key="alias">곰</prop>
+				
+			</props>
+		</property>
+	</bean>
+	
 </beans>
