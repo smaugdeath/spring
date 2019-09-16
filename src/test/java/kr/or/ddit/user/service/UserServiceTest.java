@@ -11,22 +11,23 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import kr.or.ddit.common.model.Page;
+import kr.or.ddit.config.test.RootTestConfig;
 import kr.or.ddit.user.model.User;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { 
-		"classpath:kr/or/ddit/config/spring/context-root.xml",
-		"classpath:kr/or/ddit/config/spring/context-datasource.xml",
-		"classpath:kr/or/ddit/config/spring/context-transaction.xml" })
-public class UserServiceTest {
+
+public class UserServiceTest extends RootTestConfig{
+	
+	private static final Logger logger = LoggerFactory.getLogger(UserServiceTest.class);
+	
+	private String userId = "brownTest";
 
 	@Resource(name="userService")
 	private IUserService userService;
+	
 	
 	/**
 	* Method : getUserListTest
@@ -104,7 +105,7 @@ public class UserServiceTest {
 
 	   /***Then***/
 	   assertEquals(10, userList.size());
-	   assertEquals("xuserid21", userList.get(0).getUserId());
+	   assertEquals("xuserid20", userList.get(0).getUserId());
 	   assertEquals(11, paginationSize);
 	}
 	
@@ -113,10 +114,10 @@ public class UserServiceTest {
 	   /***Given***/
 	   User user = new User();
 	   
-	   String userId = "brownTest1";
+	   String userId = "brownTest2";
 	   
 	   user.setUserId(userId);
-	   user.setUserNm("브라운테스트1");
+	   user.setUserNm("브라운테스트2");
 	   user.setPass("brownTest1234");
 	   user.setReg_dt(new SimpleDateFormat("yyyy-MM-dd").parse("2019-08-08"));
 	   user.setAlias("곰테스트");

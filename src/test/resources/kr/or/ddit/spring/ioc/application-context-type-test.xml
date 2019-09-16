@@ -8,7 +8,7 @@
 		<!-- 셋터 주입 -->
 		
 		<property name="userId" value="brown"/> <!-- 문자열 -->
-		<property name="age" value="5"/> <!-- 숫자(정수) -->
+		<!-- <property name="age" value="5"/> --> <!-- 숫자(정수) -->
 		<property name="reg_dt" value="2019-08-08"/> <!-- 등록일 (날짜-java.util.Date) -->
 	
 	

@@ -10,23 +10,15 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import kr.or.ddit.common.model.Page;
+import kr.or.ddit.config.test.RootTestConfig;
 import kr.or.ddit.user.dao.IUserDao;
 import kr.or.ddit.user.model.User;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { 
-		"classpath:kr/or/ddit/config/spring/context-root.xml",
-		"classpath:kr/or/ddit/config/spring/context-datasource.xml",
-		"classpath:kr/or/ddit/config/spring/context-transaction.xml" })
-
-public class UserDaoTest {
+public class UserDaoTest extends RootTestConfig{
 
 	private static final Logger logger = LoggerFactory.getLogger(UserDaoTest.class);
 
@@ -96,7 +88,7 @@ public class UserDaoTest {
 
 		/*** Then ***/
 		assertEquals(10, userList.size());
-		assertEquals("xuserid21", userList.get(0).getUserId());
+		assertEquals("xuserid20", userList.get(0).getUserId());
 
 	}
 
@@ -116,10 +108,10 @@ public class UserDaoTest {
 		/*** Given ***/
 		User user = new User();
 
-		String userId = "brownTest1";
+		String userId = "brownTest4";
 
 		user.setUserId(userId);
-		user.setUserNm("브라운테스트");
+		user.setUserNm("브라운테스트4");
 		user.setPass("brownTest1234");
 		user.setReg_dt(new SimpleDateFormat("yyyy-MM-dd").parse("2019-08-08"));
 		user.setAlias("곰테스트");
@@ -133,7 +125,7 @@ public class UserDaoTest {
 
 		/*** Then ***/
 		assertEquals(1, insertCnt);
-		
+		userDao.deleteUser(userId);
 
 	}
 
