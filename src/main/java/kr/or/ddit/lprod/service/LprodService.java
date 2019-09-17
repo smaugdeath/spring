@@ -47,7 +47,7 @@ public class LprodService implements ILprodService {
 		
 		map.put("lprodList", lprodList);
 		
-		map.put("paginationSize", (int)Math.ceil((double)totalCnt / page.getSize()));
+		map.put("paginationSize", (int)Math.ceil((double)totalCnt / page.getPagesize()));
 		
 		return map;
 	}

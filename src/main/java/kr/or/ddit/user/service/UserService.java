@@ -71,7 +71,7 @@ public class UserService implements IUserService{
 		   
 		map.put("userList", userList);
 		   
-		map.put("paginationSize", (int)Math.ceil((double)totalCnt / page.getSize()));
+		map.put("paginationSize", (int)Math.ceil((double)totalCnt / page.getPagesize()));
 		   
 		return map;
 	}

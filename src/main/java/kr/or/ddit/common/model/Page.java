@@ -14,22 +14,22 @@ public class Page {
    }
 
    public int getPage() {
-      return page;
+      return page == 0 ? 1 : page;
    }
 
    public void setPage(int page) {
       this.page = page;
    }
 
-   public int getSize() {
-      return pagesize;
-   }
+   public int getPagesize() {
+	   return pagesize == 0 ? 10 : pagesize;
+	}
+	
+	public void setPagesize(int pagesize) {
+		this.pagesize = pagesize;
+	}
 
-   public void setSize(int size) {
-      this.pagesize = size;
-   }
-
-   @Override
+@Override
    public String toString() {
       return "Page [page=" + page + ", size=" + pagesize + "]";
    }

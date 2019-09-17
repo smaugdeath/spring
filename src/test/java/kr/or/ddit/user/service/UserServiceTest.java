@@ -96,7 +96,7 @@ public class UserServiceTest extends RootTestConfig{
 	   /***Given***/
 	   Page page = new Page();
 	   page.setPage(3);
-	   page.setSize(10);
+	   page.setPagesize(10);
 
 	   /***When***/
 	   Map<String, Object> resultMap = userService.getUserPagingList(page); 

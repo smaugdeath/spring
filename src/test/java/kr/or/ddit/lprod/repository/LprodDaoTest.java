@@ -42,7 +42,7 @@ public class LprodDaoTest extends RootTestConfig{
 		/***Given***/
 		Page page = new Page();
 		page.setPage(1);
-		page.setSize(5);
+		page.setPagesize(5);
 		
 		/***When***/
 		List<LprodVo> lprodList = lprodDao.getLprodPagingList(page);

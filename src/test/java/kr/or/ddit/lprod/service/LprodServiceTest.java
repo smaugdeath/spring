@@ -40,7 +40,7 @@ public class LprodServiceTest extends RootTestConfig{
 		/***Given***/
 		Page page = new Page();
 		page.setPage(1);
-		page.setSize(5);
+		page.setPagesize(5);
 	
 		/***When***/
 		Map<String, Object> resultMap = lprodService.getLprodPagingList(page); 
