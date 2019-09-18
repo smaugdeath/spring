@@ -33,7 +33,7 @@ public class LprodController {
 	}
 	
 	@RequestMapping(path= "lprodPagingList", method = RequestMethod.GET)
-	public String userPagingList(Page page, Model model) {
+	public String lprodPagingList(Page page, Model model) {
 		
 		logger.debug("page : {}", page);
 		model.addAttribute("pageVo", page);
@@ -41,7 +41,7 @@ public class LprodController {
 		Map<String, Object> resultMap = lprodService.getLprodPagingList(page);
 		model.addAllAttributes(resultMap);
 		
-		return "user/userPagingList";
+		return "lprod/lprodPagingList";
 		
 	}	
 

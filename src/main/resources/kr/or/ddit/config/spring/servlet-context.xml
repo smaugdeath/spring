@@ -32,4 +32,12 @@
 			 /WEB-INF/views/(index).jsp => /WEB-INF/views/index.jsp
 		 -->
 	</bean>
+	
+	<!-- multipartResolver -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="5242880"/>
+		<property name="maxUploadSizePerFile" value="26214400"/>
+		<!-- 1000000bytes = 1024kbytes = 1mb -->
+	</bean>
+	
 </beans>

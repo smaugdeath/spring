@@ -17,7 +17,7 @@
 	           (select  *
 	           from    LPROD
 	           order by lprod_gu) a)
-   	  where rn between #{size} * (#{page} - 1) + 1 and #{size} * #{page}
+   	  where rn between #{pagesize} * (#{page} - 1) + 1 and #{pagesize} * #{page}
   </select>
   
   <!-- 사용자 전체 건수 조회 -->

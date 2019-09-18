@@ -100,7 +100,7 @@
                     </c:when>
                     <c:otherwise>
                         <li>
-                        <a href="${ cp }/lprodPagingList?page=${ pageVo.page - 1 }" aria-label="Previous">                           
+                        <a href="${ cp }/lprod/lprodPagingList?page=${ pageVo.page - 1 }" aria-label="Previous">                           
                         <span aria-hidden="true">&laquo;</span>
                         </a>
                     </c:otherwise>
@@ -114,7 +114,7 @@
                     		 <li class="active"><span>${page }</span></li>
 					</c:when>
 					<c:otherwise>
-						<li><a href="${cp }/lprodPagingList?page=${page }">${page }</a></li>
+						<li><a href="${cp }/lprod/lprodPagingList?page=${page }">${page }</a></li>
 					</c:otherwise>
 				</c:choose>                       
                 </c:forEach>
@@ -126,7 +126,7 @@
                     </c:when>
                     <c:otherwise>
                         <li>
-                        <a href="${ cp }/lprodPagingList?page=${ pageVo.page + 1 }" aria-label="Next">                           
+                        <a href="${ cp }/lprod/lprodPagingList?page=${ pageVo.page + 1 }" aria-label="Next">                           
                         <span aria-hidden="true">&raquo;</span>
                         </a>
                     </c:otherwise>

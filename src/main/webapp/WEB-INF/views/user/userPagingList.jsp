@@ -113,7 +113,7 @@ $(document).ready(function(){
                            </c:when>
                            <c:otherwise>
                                <li>
-                                 <a href="${ cp }/userPagingList?page=${ pageVo.page - 1 }" aria-label="Previous">                           
+                                 <a href="${ cp }/user/userPagingList?page=${ pageVo.page - 1 }" aria-label="Previous">                           
                                    <span aria-hidden="true">&laquo;</span>
                                  </a>
                            </c:otherwise>
@@ -127,7 +127,7 @@ $(document).ready(function(){
                        			 <li class="active"><span>${page }</span></li>
 							</c:when>
 							<c:otherwise>
-								<li><a href="${cp }/userPagingList?page=${page }">${page }</a></li>
+								<li><a href="${cp }/user/userPagingList?page=${page }">${page }</a></li>
 							</c:otherwise>
 						</c:choose>                       
                         </c:forEach>
@@ -139,7 +139,7 @@ $(document).ready(function(){
                            </c:when>
                            <c:otherwise>
                                <li>
-                                 <a href="${ cp }/userPagingList?page=${ pageVo.page + 1 }" aria-label="Next">                           
+                                 <a href="${ cp }/user/userPagingList?page=${ pageVo.page + 1 }" aria-label="Next">                           
                                    <span aria-hidden="true">&raquo;</span>
                                  </a>
                            </c:otherwise>

@@ -63,7 +63,9 @@
   </head>
 
   <body>
-
+  	userId : ${userId }
+  	<c:remove var="userId"/>
+  	
     <div class="container">
     <%
        HttpSession httpSession = request.getSession();

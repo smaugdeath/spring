@@ -29,8 +29,11 @@ public class Page {
 		this.pagesize = pagesize;
 	}
 
-@Override
-   public String toString() {
-      return "Page [page=" + page + ", size=" + pagesize + "]";
-   }
+	@Override
+	public String toString() {
+		return "Page [page=" + page + ", pagesize=" + pagesize + "]";
+	}
+	
+	
+
 }
