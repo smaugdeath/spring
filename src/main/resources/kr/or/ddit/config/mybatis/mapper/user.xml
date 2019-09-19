@@ -52,7 +52,7 @@
 	
 	<!-- 사용자 정보 수정 -->
 	<update id="modifyUser" parameterType="user">
-		update users set usernm=#{userNm}, alias=#{alias}, pass=#{pass}, realfilename=#{realfilename}, addr1=#{addr1}, addr2=#{addr2}, zipcode=#{zipcode}, filename=#{filename}
+		update users set usernm=#{userNm}, alias=#{alias}, pass=#{pass}, realfilename=#{realfilename, jdbcType=VARCHAR}, addr1=#{addr1}, addr2=#{addr2}, zipcode=#{zipcode}, filename=#{filename, jdbcType=VARCHAR}
     	 where userid=#{userId}
 	
 	</update>

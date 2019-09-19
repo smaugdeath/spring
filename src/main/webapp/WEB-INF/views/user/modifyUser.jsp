@@ -82,7 +82,7 @@
 
          <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-            <form id="frm" class="form-horizontal" role="form" action="${cp }/modifyUser"
+            <form id="frm" class="form-horizontal" role="form" action="${cp }/user/modifyUser"
                method="post" enctype="multipart/form-data">
 
                <div class="form-group">
@@ -97,7 +97,7 @@
                <div class="form-group">
                      <label for="userNm" class="col-sm-2 control-label">사용자 사진</label>
                      <div class="col-sm-10">
-                     <img src="${cp }/userPicture?userId=${user.userId}"/>
+                     <img src="${cp }/user/userPicture?userId=${user.userId}"/>
                      </div>
                   </div>
                
@@ -171,6 +171,7 @@
 
                <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
+                  
                      <button type="button" id="regBtn" class="btn btn-default">사용자 수정</button>
                   </div>
                </div>

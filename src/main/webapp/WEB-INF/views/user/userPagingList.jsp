@@ -24,9 +24,9 @@
 $(document).ready(function(){
    
    //사용자 정보 클릭시 이벤트 핸들러
-   $(".prodTr").on("click", function(){
+   $(".userTr").on("click", function(){
       
-      console.log("prodTr click");
+      console.log("userTr click");
       
       //클릭된 tr 태그의 자식태그(td)중 첫번째 자식의 텍스트 문자열
                   
@@ -38,11 +38,11 @@ $(document).ready(function(){
       var inputValue = $(this).find("input").val();
       console.log("inputValue : " + inputValue);
       
-      var dataValue = $(this).data("lprod_gu");
+      var dataValue = $(this).data("userid");
       console.log("dataValue : " + dataValue);
       
       //input 태그에 값 설정
-      $("#lprod_gu").val(dataValue);
+      $("#userId").val(dataValue);
       
       //form 태그이용 전송
       console.log("serialize : "  + $("#frm").serialize());
@@ -54,7 +54,7 @@ $(document).ready(function(){
 </head>
 
 <body>
-<form id="frm" action="${cp }/user" method="get">
+<form id="frm" action="${cp }/user/user" method="get">
    <input type="hidden" id="userId" name="userId"/>
 </form>
 
@@ -98,7 +98,7 @@ $(document).ready(function(){
                      </table>
                   </div>
 
-                  <a href="${cp }/userForm" class="btn btn-default pull-right">사용자 등록</a>
+                  <a href="${cp }/user/userForm" class="btn btn-default pull-right">사용자 등록</a>
 
                   <div class="text-center">
                      <ul class="pagination">
