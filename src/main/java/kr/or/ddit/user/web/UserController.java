@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.or.ddit.common.model.Page;
@@ -281,4 +282,19 @@ public class UserController {
 		
 		return "user/userPagingListHtmlAjax";
 	}
+	
+	@RequestMapping(path= "userPagingListAjaxRequestBody", method = RequestMethod.POST)
+	@ResponseBody
+	public Map<String, Object> userPagingListAjaxRequestBody(@RequestParam Page page, Model model) {
+		
+		model.addAttribute("pageVo", page);
+		
+		Map<String, Object> resultMap = userService.getUserPagingList(page);
+		resultMap.put("pageVo", page);
+		
+		// {userList : [{userId: "brown"}, alias : 곰...}, {...}, {...}
+		// paginationSize : 11 }
+		return resultMap;
+		
+	}	
 }
