@@ -10,9 +10,10 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import kr.or.ddit.config.test.RootTestConfig;
 import kr.or.ddit.prod.model.ProdVo;
 
-public class ProdServiceTest {
+public class ProdServiceTest extends RootTestConfig{
 
 	private static final Logger logger = LoggerFactory.getLogger(ProdServiceTest.class);
 
